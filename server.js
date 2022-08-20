@@ -17,6 +17,11 @@ app.get('/isPrime/:number', function(req, res){
     res.status(200).send(primes.isPrime(req.params.number));    
 })
 
+app.get('/root/:number', function(req, res){
+  res.status(200).send(primes.root(req.params.number));    
+})
+
+
 exports.stop = function(){
     server.close();
 }
